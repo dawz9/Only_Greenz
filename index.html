@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Trip Score Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 0 auto; }
+        .login, .scoreboard, .team-setup { display: none; }
+        .visible { display: block; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 5px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our Golf Trip Score Tracker</h1>
+        <div class="login visible" id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <button onclick="login()">Login</button>
+        </div>
+        <div class="team-setup" id="team-setup-section">
+            <h2>Setup Teams</h2>
+            <div id="team-names">
+                <!-- Team name input sections will be dynamically added here -->
+            </div>
+            <button onclick="startScoring()">Start Scoring</button>
+        </div>
+        <div class="scoreboard" id="scoreboard-section">
+            <h2>Scoreboard</h2>
+            <div id="teams">
+                <!-- Team score sections will be dynamically added here -->
+            </div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
