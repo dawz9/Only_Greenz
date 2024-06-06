@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Trip Score Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 0 auto; }
+        .login, .scoreboard, .team-setup { display: none; }
+        .visible { display: block; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 5px; text-align: center; }
+        .logo { display: block; margin: 20px auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our Golf Trip Score Tracker</h1>
+        <img src="https://github.com/username/repository-name/blob/main/only-greens.jpg?raw=true" alt="Only Greens Logo" class="logo" style="width: 200px; height: auto;">
+        <div class="login visible" id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <button onclick="login()">Login</button>
+        </div>
+        <div class="team-setup" id="team-setup-section">
+            <h2>Setup Teams</h2>
+            <div id="team-names">
+                <!-- Team name input sections will be dynamically added here -->
+            </div>
+            <button onclick="startScoring()">Start Scoring</button>
+        </div>
+        <div class="scoreboard" id="scoreboard-section">
+            <h2>Scoreboard</h2>
+            <div id="teams">
+                <!-- Team score sections will be dynamically added here -->
+            </div>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <h2>Game Rules</h2>
+        <table>
+            <tr>
+                <th>Matchup</th>
+                <th>Round</th>
+                <th>Game</th>
+                <th>Scoring</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>T1 vs T2</td>
+                <td>1st - 9</td>
+                <td>Added Score</td>
+                <td>1 point per hole</td>
+                <td>Every player plays own ball. Added scores of partners scores. P1+P2=X - Ex. 4+5=9</td>
+            </tr>
+            <tr>
+                <td>T3 vs T4</td>
+                <td>1st - 9</td>
+                <td>Own Ball</td>
+                <td>Tie 1/2 point each</td>
+                <td>Every player plays own ball.</td>
+            </tr>
+            <tr>
+                <td>T1 vs T3</td>
+                <td>2nd - 9</td>
+                <td>Best Score (Match)</td>
+                <td>1 point per hole</td>
+                <td>Every player plays own ball, best score between partners counts as hole score.</td>
+            </tr>
+            <tr>
+                <td>T2 vs T4</td>
+                <td>2nd - 9</td>
+                <td>Own Ball</td>
+                <td>Tie 1/2 point each</td>
+                <td>Every player plays own ball.</td>
+            </tr>
+            <tr>
+                <td>T1 vs T4</td>
+                <td>3rd - 9</td>
+                <td>Modified Vegas</td>
+                <td>1 point per hole</td>
+                <td>Every player plays own ball, score combined. P1 + P2 = P1,P2 - Ex. 4 + 5 = 45</td>
+            </tr>
+            <tr>
+                <td>T2 vs T3</td>
+                <td>3rd - 9</td>
+                <td>Own Ball</td>
+                <td>Tie 1/2 point each</td>
+                <td>Every player plays own ball.</td>
+            </tr>
+            <tr>
+                <td>1st vs 4th</td>
+                <td>4th - 9</td>
+                <td>2-man Best Ball</td>
+                <td>1 point per hole</td>
+                <td>2-man best ball in teams.</td>
+            </tr>
+            <tr>
+                <td>2nd vs 3rd</td>
+                <td>4th - 9</td>
+                <td>Best Ball</td>
+                <td>Tie 1/2 point each</td>
+                <td>Seeded based on standings of first 3 rounds.</td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
